@@ -29,14 +29,14 @@ const About = () => {
                     waveAmplitude={0}
                 />
                 <div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8 text-center gap-2 sm:gap-3 md:gap-4">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8 text-left gap-2 sm:gap-3 md:gap-4">
             <div className='hero-content flex-col lg:flex-row-reverse w-full max-w-6xl mx-auto'>
               <img
                 src="https://i.ibb.co.com/r2Pqx599/Monir-Photo.png"
                 className="w-40 h-40 xs:w-48 xs:h-48 sm:w-64 sm:h-64 md:max-w-sm rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 object-cover"
                 alt="Monir"
               />
-              <div className="w-full px-2 sm:px-4 md:px-6">
+              <div className="w-full px-2 sm:px-4 md:px-6 text-left">
                 <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white font-google transition-all duration-300 hover:text-white hover:drop-shadow-xl drop-shadow-lg leading-tight">
                   Hi, I'm Md. Moniruzzaman
                 </h1>

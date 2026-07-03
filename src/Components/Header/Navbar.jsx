@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 gap-0 sm:gap-1">
                     <li><a href="#about" className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">About</a></li>
                         <li>
-                           <Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</Link>
+                           <a href='#skills' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</a>
                         </li>
                         <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Education</Link></li>
                         <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Experience</Link></li>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-sm sm:btn-md md:btn-lg btn-primary text-white hover:text-white hover:scale-105 transition-all duration-300 active:scale-95 text-xs sm:text-sm md:text-base">_Resume</a>
+                <a className="btn btn-sm sm:btn-md md:btn-lg btn-accent text-white hover:text-white hover:scale-105 transition-all duration-300 active:scale-95 text-xs sm:text-sm md:text-base">_Resume</a>
             </div>
         </div>
     );
