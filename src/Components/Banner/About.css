@@ -206,3 +206,203 @@ h1:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Hero content specific responsive styles */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Mobile first */
+@media (max-width: 640px) {
+  .hero-content {
+    gap: 0.75rem;
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+
+  .hero-content img {
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-content {
+    gap: 1.5rem;
+    padding: 1rem;
+    flex-direction: row;
+  }
+}
+
+/* Desktop with flex-row-reverse */
+@media (min-width: 1025px) {
+  .hero-content {
+    flex-direction: row-reverse;
+    gap: 3rem;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-content img {
+    flex-shrink: 0;
+  }
+
+  .hero-content > div {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+/* Image styling */
+.hero-content img {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.4);
+}
+
+.hero-content img:active {
+  transform: scale(0.98);
+}
+
+/* Button container responsive layout */
+.hero-content .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .hero-content .flex {
+    gap: 0.5rem;
+    flex-direction: row;
+  }
+
+  .hero-content .btn {
+    flex: 0 1 auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-content .flex {
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-content .flex {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+}
+
+/* Button styling and hover effects */
+.hero-content .btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hero-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+}
+
+.hero-content .btn:active {
+  transform: translateY(-1px);
+}
+
+/* Primary button */
+.hero-content .btn-primary:hover {
+  background-color: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Accent button */
+.hero-content .btn-accent:hover {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+/* Icon animations */
+.hero-content .btn svg {
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Text responsive sizing */
+.hero-content h1 {
+  transition: all 0.3s ease;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hero-content h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+.hero-content p {
+  transition: all 0.3s ease;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hero-content p:hover {
+  color: #ffffff;
+}
+
+/* Accessibility improvements */
+.hero-content .btn:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+.hero-content a:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Touch-friendly spacing for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .hero-content .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
