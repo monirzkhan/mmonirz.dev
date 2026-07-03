@@ -25,36 +25,35 @@ const About = () => {
                     dotSpacing={14}
                     bulgeStrength={67}
                     glowRadius={160}
-                    sparkle={false}
+                    sparkle={true}
                     waveAmplitude={0}
                 />
                 <div>
-                    <div className="px-2 absolute inset-0 flex flex-col items-center space-x-4 justify-center  text-left">
-                        <div className="hero  min-h-screen">
-
-                            <div className="hero-content flex-col lg:flex-row-reverse">
-                                <img
-                                    src="https://i.ibb.co.com/r2Pqx599/Monir-Photo.png"
-                                    className="max-w-sm rounded-lg shadow-2xl"
-                                />
-                                <div className=''>
-
-                                    <h1 className="text-3xl lg:text-6xl font-bold text-white px-1">Hi! I'm Md. Moniruzzaman</h1>
-                                    <TextType
-                                        text={[
-                                            'Full Stack Web Developer',
-                                            'React & Tailwind enthusiast',
-                                            'Building polished portfolio experiences'
-                                        ]}
-                                        typingSpeed={75}
-                                        pauseDuration={1500}
-                                        showCursor={true}
-                                        cursorCharacter="|"
-                                        className="margin text-2xl mt-4 font-google text-white"
-                                        cursorClassName="text-white"
-
-                                    />
-                                    <p className="text-lg mt-4 px-1 text-white font-google max-w-2xl margin">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-left gap-3 sm:gap-4">
+            <div className='hero-content flex-col lg:flex-row-reverse'>
+              <img
+                src="https://i.ibb.co.com/r2Pqx599/Monir-Photo.png"
+                className="max-w-sm rounded-lg shadow-2xl"
+              />
+              <div>
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-google transition-all duration-300 hover:text-white drop-shadow-lg">
+                  Hi, I'm Md. Moniruzzaman
+                </h1>
+                <div className="transition-all duration-300 hover:text-white">
+                  <TextType
+                    text={[
+                      'Full Stack Web Developer',
+                      'React & Tailwind enthusiast',
+                      'Building polished portfolio experiences'
+                    ]}
+                    typingSpeed={75}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className="text-sm xs:text-base sm:text-lg lg:text-2xl mt-2 sm:mt-4 font-google text-white drop-shadow-lg"
+                    cursorClassName="text-white"
+                  />
+                      <p className="text-lg mt-4 px-1 text-white font-google max-w-2xl margin">
                                         Welcome to my portfolio website! I'm a passionate developer with a love for creating innovative solutions. Explore my projects and skills to see how I can contribute to your next big idea.
                                     </p>
                                     <div className='margin space-x-2'>
@@ -66,15 +65,18 @@ const About = () => {
                                         <Link to={"https://github.com/monirzkhan"} className="btn btn-primary "> <FaGithub size={32} />
                                             Github</Link>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
                 </div>
             </div>
 
         </div>
+        
+        
     );
 };
 

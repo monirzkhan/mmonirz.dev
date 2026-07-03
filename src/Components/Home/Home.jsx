@@ -4,15 +4,13 @@ import AboutMe from '../AboutMe/AboutMe';
 import Skills from '../Skills/Skills';
 
 
-
-
-
 const Home = () => {
     return (
         <div >
 
         
             <About/>
+            {/* <App/> */}
             <AboutMe/>
             <Skills/>
             

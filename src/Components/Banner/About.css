@@ -1,3 +1,208 @@
 .margin{
     margin-top: 20px;
 }
+
+/* Responsive breakpoints: mobile-first approach */
+
+/* Global hover effects */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hero section responsive adjustments */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+section > div {
+  transition: all 0.3s ease;
+}
+
+/* Text hover effects */
+h1 {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Cursor pointer for interactive elements */
+button,
+a,
+[role="button"] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover,
+[role="button"]:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 640px) {
+  h1 {
+    line-height: 1.2;
+  }
+
+  section > div {
+    padding: 1rem 0;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 641px) and (max-width: 1024px) {
+  section > div {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1025px) {
+  section > div {
+    padding: 2rem 0;
+  }
+}
+
+/* Extra small devices (mobile phones) */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.25rem;
+    line-height: 1.1;
+  }
+
+  p,
+  span {
+    font-size: 0.875rem;
+  }
+}
+
+/* Small devices (landscape mobile, small tablets) */
+@media (max-width: 640px) {
+  section {
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  span {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  p,
+  span {
+    font-size: 1.125rem;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p,
+  span {
+    font-size: 1.25rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on certain elements */
+h1,
+button {
+  user-select: none;
+}
+
+/* Touch-friendly button sizes for mobile */
+@media (max-width: 640px) {
+  button,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Animations for subtle effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section > div {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Glow effect on hover */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(168, 85, 247, 0.4);
+  }
+}
+
+h1:hover {
+  animation: glowPulse 1s ease-in-out;
+}
+
+/* Ticks class styling */
+.ticks {
+  width: 100%;
+  height: auto;
+  min-height: 1px;
+}
+
+/* Print styles */
+@media print {
+  section > div {
+    page-break-inside: avoid;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  section > div {
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

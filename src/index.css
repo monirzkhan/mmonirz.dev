@@ -140,3 +140,165 @@
 * {
   font-family: var(--font-raleway);
 }
+
+/* Global responsive utilities */
+:root {
+  /* Mobile-first font sizes */
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* Global hover effects */
+body {
+  transition: background-color 0.3s ease;
+}
+
+button,
+a,
+[role="button"],
+.btn {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover,
+[role="button"]:hover,
+.btn:hover {
+  color: #ffffff;
+}
+
+/* Link styling */
+a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Responsive container */
+main,
+section {
+  width: 100%;
+}
+
+/* Responsive text */
+h1, h2, h3, h4, h5, h6 {
+  transition: all 0.3s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: #ffffff;
+}
+
+/* Input and form elements */
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+  border-color: currentColor;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #a855f7;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #a855f7;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+/* Mobile touch targets */
+@media (max-width: 640px) {
+  button,
+  [role="button"],
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  a {
+    padding: 0.5rem 0.25rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  button,
+  .btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  button,
+  .btn {
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove transitions from specific elements to avoid lag */
+canvas,
+video {
+  transition: none;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  button,
+  [role="button"],
+  .btn {
+    display: none;
+  }
+}
+
+/* Landscape mobile adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

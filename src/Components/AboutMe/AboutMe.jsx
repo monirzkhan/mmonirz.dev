@@ -8,9 +8,9 @@ import { VscThinking } from "react-icons/vsc";
 
 const AboutMe = () => {
     return (
-        <div id="aboutMe" className="bg-[#0F172A]  px-8 flex flex-col md:flex-row-reverse justify-center gap-8 items-center py-8">
+        <div id="about" className="bg-[#0F172A]  px-8 flex flex-col md:flex-row-reverse justify-center gap-8 items-center py-8">
             <div className="space-y-4 md:w-1/2 ">
-                <h1 className="text-3xl font-raleway text-accent">About <span className="text-4xl font-bricolage font-bold text-secondary">Me</span></h1>
+                <h1 className="text-3xl font-raleway text-accent">About <span className="text-3xl font-bricolage font-bold text-secondary">Me</span></h1>
 
                 <h3 className="text-xl font-bricolage text-white italic ">Building Digital Products with Business Thinking</h3>
 
