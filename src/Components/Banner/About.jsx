@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { CiSaveDown2 } from "react-icons/ci";
+import resumePdf from '../../assets/Mohammad_Moniruzzaman_Europass_CV.pdf';
 
 
 
@@ -57,25 +58,27 @@ const About = () => {
                   <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg mt-3 sm:mt-4 md:mt-5 px-1 text-white font-google max-w-2xl mx-auto leading-relaxed">
                     Welcome to my portfolio website! I'm a passionate developer with a love for creating innovative solutions. Explore my projects and skills to see how I can contribute to your next big idea.
                   </p>
-                  <div className='flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-6'>
-                    <Link to={"https://github.com/monirzkhan"}>
-                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-accent text-white hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1 sm:gap-2">
-                        <CiSaveDown2 size={16} className="sm:hidden" />
-                        <CiSaveDown2 size={20} className="hidden sm:block md:hidden" />
-                        <CiSaveDown2 size={24} className="hidden md:block" />
-                        <span className="text-xs sm:text-sm md:text-base">Resume</span>
-                      </button>
-                    </Link>
-                    <Link to={"https://linkedin.com/in/monirzkhan-dev"}>
-                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary text-white hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1 sm:gap-2">
+                  <div className='mt-3 flex flex-nowrap items-center justify-center gap-2 sm:mt-4 sm:gap-3 md:mt-6 md:gap-4'>
+                    <a
+                      href={resumePdf}
+                      download="Mohammad_Moniruzzaman_Europass_CV.pdf"
+                      className="btn btn-sm sm:btn-md md:btn-lg btn-accent flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
+                    >
+                      <CiSaveDown2 size={16} className="sm:hidden" />
+                      <CiSaveDown2 size={20} className="hidden sm:block md:hidden" />
+                      <CiSaveDown2 size={24} className="hidden md:block" />
+                      <span className="text-xs sm:text-sm md:text-base">Resume</span>
+                    </a>
+                    <Link to={"https://linkedin.com/in/monirzkhan-dev"} target='_blank'>
+                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
                         <FaLinkedin size={16} className="sm:hidden" />
                         <FaLinkedin size={20} className="hidden sm:block md:hidden" />
                         <FaLinkedin size={24} className="hidden md:block" />
                         <span className="text-xs sm:text-sm md:text-base">LinkedIn</span>
                       </button>
                     </Link>
-                    <Link to={"https://github.com/monirzkhan"}>
-                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary text-white hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1 sm:gap-2">
+                    <Link to={"https://github.com/monirzkhan"} target='_blank'>
+                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
                         <FaGithub size={16} className="sm:hidden" />
                         <FaGithub size={20} className="hidden sm:block md:hidden" />
                         <FaGithub size={24} className="hidden md:block" />

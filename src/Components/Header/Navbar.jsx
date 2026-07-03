@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router';
 import './navbar.css';
+import resumePdf from '../../assets/Mohammad_Moniruzzaman_Europass_CV.pdf';
 
 const Navbar = () => {
     
@@ -39,7 +40,11 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-sm sm:btn-md md:btn-lg btn-accent text-white hover:text-white hover:scale-105 transition-all duration-300 active:scale-95 text-xs sm:text-sm md:text-base">_Resume</a>
+                   <a
+                                      href={resumePdf}
+                                      download="Mohammad_Moniruzzaman_Europass_CV.pdf"
+                                      className="btn btn-sm sm:btn-md md:btn-lg btn-accent flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
+                                    >_Resume</a>
             </div>
         </div>
     );
