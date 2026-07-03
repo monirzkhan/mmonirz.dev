@@ -1,9 +1,20 @@
 import React from 'react';
 
+import About from '../Banner/About';
+import App from '../../App';
+
+
+
+
+
 const Home = () => {
     return (
-        <div>
-            <h1>This is Home Page</h1>
+        <div >
+
+        
+            <About/>
+            
+            
         </div>
     );
 };
