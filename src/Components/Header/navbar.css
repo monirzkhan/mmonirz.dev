@@ -5,13 +5,13 @@
   transition: all 0.3s ease;
 }
 
-.navbar-start,
+/* .navbar-start,
 .navbar-center,
 .navbar-end {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
+} */
 
 /* Responsive navbar padding */
 @media (max-width: 640px) {

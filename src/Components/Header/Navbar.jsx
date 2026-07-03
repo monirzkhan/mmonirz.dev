@@ -27,7 +27,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost btn-sm sm:btn-md text-xs sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-0 sm:gap-1">
+                <ul className="menu menu-horizontal px-1">
                     <li><a href="#about" className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">About</a></li>
                         <li>
                            <a href='#skills' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</a>

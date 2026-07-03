@@ -2,6 +2,7 @@
 import About from '../Banner/About';
 import AboutMe from '../AboutMe/AboutMe';
 import Skills from '../Skills/Skills';
+import Experience from '../Experience/Experience';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             {/* <App/> */}
             <AboutMe/>
             <Skills/>
+            <Experience/>
             
             
         </div>

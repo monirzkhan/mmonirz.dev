@@ -29,7 +29,7 @@ const About = () => {
                     waveAmplitude={0}
                 />
                 <div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8 text-left gap-2 sm:gap-3 md:gap-4">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 py-4 sm:py-2 md:py-4 text-left gap-2 sm:gap-3 md:gap-4">
             <div className='hero-content flex-col lg:flex-row-reverse w-full max-w-6xl mx-auto'>
               <img
                 src="https://i.ibb.co.com/r2Pqx599/Monir-Photo.png"
@@ -44,7 +44,7 @@ const About = () => {
                   <TextType
                     text={[
                       'Full Stack Web Developer',
-                      'React & Tailwind enthusiast',
+                      'Enterpreneur',
                       'Building polished portfolio experiences'
                     ]}
                     typingSpeed={75}
