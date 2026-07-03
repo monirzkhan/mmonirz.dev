@@ -29,7 +29,7 @@ const About = () => {
                     waveAmplitude={0}
                 />
                 <div>
-                    <div className="absolute inset-0 flex flex-col items-center space-x-4 justify-center  text-left">
+                    <div className="px-2 absolute inset-0 flex flex-col items-center space-x-4 justify-center  text-left">
                         <div className="hero  min-h-screen">
 
                             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -39,7 +39,7 @@ const About = () => {
                                 />
                                 <div className=''>
 
-                                    <h1 className="text-3xl lg:text-6xl font-bold text-white">Hi! I'm Md. Moniruzzaman</h1>
+                                    <h1 className="text-3xl lg:text-6xl font-bold text-white px-1">Hi! I'm Md. Moniruzzaman</h1>
                                     <TextType
                                         text={[
                                             'Full Stack Web Developer',
@@ -54,7 +54,7 @@ const About = () => {
                                         cursorClassName="text-white"
 
                                     />
-                                    <p className="text-lg mt-4 text-white font-google max-w-2xl margin">
+                                    <p className="text-lg mt-4 px-1 text-white font-google max-w-2xl margin">
                                         Welcome to my portfolio website! I'm a passionate developer with a love for creating innovative solutions. Explore my projects and skills to see how I can contribute to your next big idea.
                                     </p>
                                     <div className='margin space-x-2'>

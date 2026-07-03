@@ -8,13 +8,13 @@ import { VscThinking } from "react-icons/vsc";
 
 const AboutMe = () => {
     return (
-        <div className="bg-[#0F172A]  px-8 flex flex-col md:flex-row-reverse justify-center gap-8 items-center py-8">
+        <div id="aboutMe" className="bg-[#0F172A]  px-8 flex flex-col md:flex-row-reverse justify-center gap-8 items-center py-8">
             <div className="space-y-4 md:w-1/2 ">
                 <h1 className="text-3xl font-raleway text-accent">About <span className="text-4xl font-bricolage font-bold text-secondary">Me</span></h1>
 
-                <h3 className="text-xl font-bricolage text-white italic">Building Digital Products with Business Thinking</h3>
+                <h3 className="text-xl font-bricolage text-white italic ">Building Digital Products with Business Thinking</h3>
 
-                <p className="text-lg font-google text-secondary md:text-justify mb-4">Hi, I'm Mohammad Moniruzzaman — a Full Stack Developer, entrepreneur, and problem solver based in Bangladesh. <br /><br />
+                <p className="sm:text-sm md:text-lg font-google text-secondary text-justify mb-4 ">Hi, I'm Mohammad Moniruzzaman — a Full Stack Developer, entrepreneur, and problem solver based in Bangladesh. <br /><br />
 
                     My journey didn't begin with programming. I spent 7+ years working in construction, government projects, international documentation, and business development. Those experiences taught me how real organizations operate, how decisions are made, and where technology can create meaningful impact. <br /><br />
 
