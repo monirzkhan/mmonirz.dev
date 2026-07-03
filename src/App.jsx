@@ -1,7 +1,6 @@
 
 
 import './App.css'
-import Card from './Components/Banner/Card'
 import DotField from './Components/Banner/DotField'
 import TextType from './Components/Banner/TextType'
 

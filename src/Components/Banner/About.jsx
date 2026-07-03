@@ -1,7 +1,14 @@
-import React from 'react';
+
 import DotField from './DotField';
 import './About.css'
 import TextType from './TextType';
+import { Link } from 'react-router';
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { CiSaveDown2 } from "react-icons/ci";
+
+
+
 
 const About = () => {
     return (
@@ -22,7 +29,7 @@ const About = () => {
                     waveAmplitude={0}
                 />
                 <div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center  text-left">
+                    <div className="absolute inset-0 flex flex-col items-center space-x-4 justify-center  text-left">
                         <div className="hero  min-h-screen">
 
                             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -32,7 +39,7 @@ const About = () => {
                                 />
                                 <div className=''>
 
-                                    <h1 className="text-6xl font-bold text-white">Hi! I'm Md. Moniruzzaman</h1>
+                                    <h1 className="text-3xl lg:text-6xl font-bold text-white">Hi! I'm Md. Moniruzzaman</h1>
                                     <TextType
                                         text={[
                                             'Full Stack Web Developer',
@@ -45,15 +52,19 @@ const About = () => {
                                         cursorCharacter="|"
                                         className="margin text-2xl mt-4 font-google text-white"
                                         cursorClassName="text-white"
-                                        
+
                                     />
                                     <p className="text-lg mt-4 text-white font-google max-w-2xl margin">
                                         Welcome to my portfolio website! I'm a passionate developer with a love for creating innovative solutions. Explore my projects and skills to see how I can contribute to your next big idea.
                                     </p>
-                                    <div>
-                                        <button className="btn btn-primary margin">Download Resume</button>
-                                        <button className="btn btn-primary margin">Linkedin</button>
-                                        <button className="btn btn-primary margin">Github</button>
+                                    <div className='margin space-x-2'>
+
+                                        <Link to={"https://github.com/monirzkhan"}><button className="btn btn-accent text-white"><CiSaveDown2 size={32} />
+                                            Download Resume</button></Link>
+                                        <Link to={"https://linkedin.com/in/monirzkhan-dev"}><button className="btn btn-primary "><FaLinkedin size={32} />
+                                            Linkedin</button></Link>
+                                        <Link to={"https://github.com/monirzkhan"} className="btn btn-primary "> <FaGithub size={32} />
+                                            Github</Link>
                                     </div>
                                 </div>
                             </div>

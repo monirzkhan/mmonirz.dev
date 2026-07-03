@@ -1,7 +1,7 @@
-import React from 'react';
 
 import About from '../Banner/About';
-import App from '../../App';
+import AboutMe from '../AboutMe/AboutMe';
+import Skills from '../Skills/Skills';
 
 
 
@@ -13,6 +13,8 @@ const Home = () => {
 
         
             <About/>
+            <AboutMe/>
+            <Skills/>
             
             
         </div>
