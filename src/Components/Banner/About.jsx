@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { CiSaveDown2 } from "react-icons/ci";
 import resumePdf from '../../assets/Mohammad_Moniruzzaman_Europass_CV.pdf';
+import RotatingText from './RotatingText';
 
 
 
@@ -38,10 +39,33 @@ const About = () => {
                 alt="Monir"
               />
               <div className="w-full px-2 sm:px-4 md:px-6 text-left">
+                  <div className="mt-1 sm:mt-2 md:mt-4 flex flex-wrap items-center gap-2 text-white mb-15">
+                  <h1>
+                       
+                      Creative
+                  
+                  </h1>
+                  <span>
+                    <RotatingText
+                      texts={['Thinking', 'Components!', 'Build']}
+                      mainClassName="px-2 sm:px-2 md:px-3 bg-accent text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg text-3xl font-bold text-white"
+                      staggerFrom={'last'}
+                      initial={{ y: '100%' }}
+                      animate={{ y: 0 }}
+                      exit={{ y: '-120%' }}
+                      staggerDuration={0.025}
+                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                      transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                      rotationInterval={2200}
+                    />
+                  </span>
+                    
+                  </div>
                 <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white font-google transition-all duration-300 hover:text-white hover:drop-shadow-xl drop-shadow-lg leading-tight">
                   Hi, I'm Md. Moniruzzaman
                 </h1>
                 <div className="transition-all duration-300 hover:text-white mt-2 sm:mt-3">
+                
                   <TextType
                     text={[
                       'Full Stack Web Engineer',
