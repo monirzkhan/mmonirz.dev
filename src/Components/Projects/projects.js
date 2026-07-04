@@ -40,6 +40,14 @@ const projects = [
             "Role-based dashboard",
             "Booking availability",
             "Responsive UI",
+            "Admin Dashboard statistics",
+            "Customer Dashboard ",
+            "Rental Calculation ",
+            "Revenue Report Generation and download by categories",
+            "Order and Delivery Real Time Status Update",
+            "Invoice Generation",
+            "Wishlist",
+            "Search by categories"
         ],
 
         improvements: [
@@ -86,6 +94,8 @@ const projects = [
             "Filtering",
             "Responsive dashboard",
             "CRUD operations",
+            "Rechart Developement",
+            "LocalStorage set up"
         ],
 
         improvements: [
@@ -110,6 +120,7 @@ const projects = [
             "HTML",
             "CSS",
             "JavaScript",
+            "React",
             "Node.js",
             "Tailwind CSS",
             "DaisyUI",
@@ -124,8 +135,9 @@ const projects = [
         challenges: [
             "Ticket workflow",
             "Role permissions",
-            "Real-time status updates",
-            "Dashboard statistics",
+            "Real Time increament and Decreament",
+
+            
         ],
 
         improvements: [

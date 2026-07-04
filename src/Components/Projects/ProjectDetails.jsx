@@ -6,6 +6,8 @@ import {
     FaExternalLinkAlt,
     FaGithub,
     FaCheckCircle,
+    FaHtml5,
+    FaCss3Alt,
 } from "react-icons/fa";
 
 import {
@@ -14,22 +16,32 @@ import {
 } from "react-icons/fa";
 
 import {
+    SiDaisyui,
     SiExpress,
     SiFirebase,
     SiJsonwebtokens,
     SiMongodb,
+    SiReactrouter,
     SiTailwindcss,
 } from "react-icons/si";
 import useScrollTop from "../../Hooks/useScrollTop";
 import { useEffect } from "react";
+import { BsJavascript } from "react-icons/bs";
 
 const iconMap = {
-    React: <FaReact className="text-sky-400" />,
-    "Express.js": <SiExpress className="text-gray-300" />,
-    MongoDB: <SiMongodb className="text-green-500" />,
-    Firebase: <SiFirebase className="text-yellow-400" />,
-    JWT: <SiJsonwebtokens className="text-orange-400" />,
-    "Tailwind CSS": <SiTailwindcss className="text-cyan-400" />,
+    HTML: <FaHtml5 />,
+     CSS: <FaCss3Alt />,
+     JavaScript: <BsJavascript></BsJavascript>,
+     React: <FaReact className="text-sky-400" />,
+     ReactRouter: <SiReactrouter className="text-sky-400" />,
+     "Express.js": <SiExpress className="text-gray-300" />,
+     MongoDB: <SiMongodb className="text-green-500" />,
+     Firebase: <SiFirebase className="text-yellow-400" />,
+     "Tailwind CSS": <SiTailwindcss className="text-cyan-400" />,
+     JWT: <SiJsonwebtokens className="text-orange-400" />,
+     Recharts: <SiJsonwebtokens className="text-orange-400" />,
+     "Sweet Alert": <SiJsonwebtokens className="text-orange-400" />,
+     DaisyUI:<SiDaisyui/>
 };
 
 const ProjectDetails = () => {
