@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 import { FiSend } from "react-icons/fi";
@@ -11,6 +12,12 @@ const initialForm = {
   message: "",
 };
 
+const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const recipientEmail = import.meta.env.VITE_CONTACT_RECIPIENT_EMAIL || "mmonirz.dev@gmail.com";
+const isEmailServiceConfigured = Boolean(emailServiceId && emailTemplateId && emailPublicKey);
+
 export default function Contact() {
   const [formData, setFormData] = useState(initialForm);
   const [errors, setErrors] = useState({});
@@ -18,6 +25,12 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const messageLength = useMemo(() => formData.message.length, [formData.message]);
+
+  useEffect(() => {
+    if (emailPublicKey) {
+      emailjs.init(emailPublicKey);
+    }
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -52,7 +65,7 @@ export default function Contact() {
     return nextErrors;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const nextErrors = validate();
@@ -66,11 +79,49 @@ export default function Contact() {
     setIsSubmitting(true);
     setStatus({ type: "loading", message: "Sending your message..." });
 
-    window.setTimeout(() => {
+    try {
+      if (isEmailServiceConfigured) {
+        const emailPayload = {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_name: formData.name,
+          from_email: formData.email,
+          reply_to: formData.email,
+          to_email: recipientEmail,
+          subject: `Portfolio contact from ${formData.name}`,
+          body: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
+        };
+
+        await emailjs.send(emailServiceId, emailTemplateId, emailPayload, emailPublicKey);
+      } else {
+        const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        );
+
+        window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+      }
+
       setFormData(initialForm);
+      setErrors({});
+      setStatus({
+        type: "success",
+        message: isEmailServiceConfigured
+          ? "Thanks! Your message has been sent successfully."
+          : "Your email app opened with your message prefilled. Please send it to complete the contact request.",
+      });
+    } catch (error) {
+      console.error("Failed to send contact form", error);
+      setStatus({
+        type: "error",
+        message: isEmailServiceConfigured
+          ? "We couldn't send your message right now. Please try again or email me directly."
+          : "We couldn't open your email app automatically. Please email me directly at mmonirz.dev@gmail.com.",
+      });
+    } finally {
       setIsSubmitting(false);
-      setStatus({ type: "success", message: "Thanks! Your message has been prepared for follow-up." });
-    }, 900);
+    }
   };
 
   const fieldClassName = (name) => `input-group ${errors[name] ? "has-error" : ""}`;
