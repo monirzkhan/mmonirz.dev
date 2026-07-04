@@ -257,6 +257,7 @@ const ElectricBorder = ({
   return (
     <div
       ref={containerRef}
+      id='experience'
       className={`relative overflow-visible isolate ${className ?? ''}`}
       style={{ '--electric-border-color': color, borderRadius, ...style }}
     >
