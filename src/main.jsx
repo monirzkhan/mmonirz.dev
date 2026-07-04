@@ -6,13 +6,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import { createRoot } from 'react-dom/client'
 import Layout from './Components/Layout/Layout.jsx'
 import Home from './Components/Home/Home.jsx'
+import NotFound from './Components/NotFound/NotFound.jsx'
 
 const router = createBrowserRouter([
 
   {
     path: '/',
     element: <Layout/>,
-    errorElement: <div>404 Not Found</div>,
+    errorElement: <NotFound/>,
     children: [
       {
         index: true,
