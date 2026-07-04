@@ -46,8 +46,10 @@ const Navbar = () => {
                         <li className="nav-link"><a href='#contact' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Contact</a></li>
                     </ul>
                 </div>
-                <img src="/src/assets/logo.png" alt="logo" className='md:h-10 h-5' />
-                <a className="btn btn-ghost btn-sm sm:btn-md text-xs sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev</a>
+                <img src="https://i.ibb.co.com/tMhJf2Xy/logo.png" alt="logo" className='md:h-10 h-5' />
+                <a href='/' className="btn btn-ghost btn-sm sm:btn-md text-xs sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev
+                    
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

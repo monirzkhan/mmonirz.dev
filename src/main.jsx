@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client'
 import Layout from './Components/Layout/Layout.jsx'
 import Home from './Components/Home/Home.jsx'
 import NotFound from './Components/NotFound/NotFound.jsx'
+import ProjectDetails from './Components/Projects/ProjectDetails.jsx'
 
 const router = createBrowserRouter([
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home/>,
+      },
+      {
+        path:'project/:id',
+        element: <ProjectDetails/>
       }
     ]
   }
