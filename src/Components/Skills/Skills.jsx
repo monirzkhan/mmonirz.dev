@@ -6,7 +6,7 @@ export default function Skills() {
     return (
         <section className="skills section " id="skills">
 
-            <div className="section-title">
+            <div className="section-title md:-mb-120">
 
                  <h1 className="text-3xl font-raleway text-accent">Tech <span className="text-4xl font-bricolage font-bold text-secondary">Stack</span></h1>
 

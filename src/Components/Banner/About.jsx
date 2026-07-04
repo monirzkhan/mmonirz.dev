@@ -15,7 +15,7 @@ const About = () => {
     return (
         <div>
             <div
-                className="relative min-h-screen sm:h-[700px] md:h-[750px] lg:h-[800px] w-full overflow-hidden bg-cover bg-center"
+                className="relative min-h-screen md:h-[500px] lg:h-[600px] w-full overflow-hidden bg-cover bg-center"
                 style={{
                     backgroundImage:
                         'linear-gradient(135deg, rgba(6, 11, 34, 0.98), rgba(15, 23, 42, 0.95)), radial-gradient(circle at top left, rgba(99, 102, 241, 0.14), transparent 28%), radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.1), transparent 24%)',
@@ -44,33 +44,33 @@ const About = () => {
                 <div className="transition-all duration-300 hover:text-white mt-2 sm:mt-3">
                   <TextType
                     text={[
-                      'Full Stack Web Developer',
+                      'Full Stack Web Engineer',
                       'Enterpreneur',
                       'Building polished portfolio experiences'
                     ]}
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={true}
-                    cursorCharacter="|"
+                    cursorCharacter="_"
                     className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-2xl mt-1 sm:mt-2 md:mt-4 font-google text-white drop-shadow-lg"
                     cursorClassName="text-white"
                   />
-                  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg mt-3 sm:mt-4 md:mt-5 px-1 text-white font-google max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-lg mt-3 sm:mt-4 md:mt-5 px-1 text-white font-bricolage max-w-2xl text-justify">
                     Welcome to my portfolio website! I'm a passionate developer with a love for creating innovative solutions. Explore my projects and skills to see how I can contribute to your next big idea.
                   </p>
-                  <div className='mt-3 flex flex-nowrap items-center justify-center gap-2 sm:mt-4 sm:gap-3 md:mt-6 md:gap-4'>
+                  <div className='mt-3 flex flex-nowrap items-center justify-center gap-2 text-ce sm:mt-4 sm:gap-3 md:mt-6 md:gap-4'>
                     <a
                       href={resumePdf}
                       download="Mohammad_Moniruzzaman_Europass_CV.pdf"
-                      className="btn btn-sm sm:btn-md md:btn-lg btn-accent flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
+                      className=" btn btn-sm sm:btn-md md:btn-lg btn-accent @min-xs:flex  items-center gap-1 whitespace-nowrap  text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
                     >
                       <CiSaveDown2 size={16} className="sm:hidden" />
                       <CiSaveDown2 size={20} className="hidden sm:block md:hidden" />
                       <CiSaveDown2 size={24} className="hidden md:block" />
-                      <span className="text-xs sm:text-sm md:text-base">Resume</span>
+                      <span className="text-xs sm:text-sm md:text-base">Download Resume</span>
                     </a>
                     <Link to={"https://linkedin.com/in/monirzkhan-dev"} target='_blank'>
-                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
+                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-info flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
                         <FaLinkedin size={16} className="sm:hidden" />
                         <FaLinkedin size={20} className="hidden sm:block md:hidden" />
                         <FaLinkedin size={24} className="hidden md:block" />
@@ -78,7 +78,7 @@ const About = () => {
                       </button>
                     </Link>
                     <Link to={"https://github.com/monirzkhan"} target='_blank'>
-                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-primary flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
+                      <button className="btn btn-sm sm:btn-md md:btn-lg btn-info flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2">
                         <FaGithub size={16} className="sm:hidden" />
                         <FaGithub size={20} className="hidden sm:block md:hidden" />
                         <FaGithub size={24} className="hidden md:block" />

@@ -1,10 +1,31 @@
 
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import { IoMdSunny } from "react-icons/io";
+import { IoMoon } from "react-icons/io5";
+
 import './navbar.css';
 import resumePdf from '../../assets/Mohammad_Moniruzzaman_Europass_CV.pdf';
 
 const Navbar = () => {
-    
+    const [isDark, setIsDark] = useState(() => {
+        if (typeof window === 'undefined') return false;
+
+        const savedTheme = window.localStorage.getItem('portfolio-theme');
+        if (savedTheme) return savedTheme === 'dark';
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    });
+
+    useEffect(() => {
+        const root = document.documentElement;
+        const nextTheme = isDark ? 'dark' : 'retro';
+
+        root.setAttribute('data-theme', nextTheme);
+        root.classList.toggle('dark', isDark);
+        root.style.colorScheme = isDark ? 'dark' : 'light';
+        window.localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+    }, [isDark]);
+
     return (
         <div className="navbar bg-base-100 shadow-md sticky top-0 z-50 transition-all duration-300 px-2 sm:px-4 md:px-6">
             <div className="navbar-start gap-2">
@@ -15,14 +36,14 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-48 sm:w-52 shadow-lg">
-                        <li className="nav-link"><Link to={'/#aboutMe'} className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">About</Link></li>
+                        <li className="nav-link"><a href='#about' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">About</a></li>
                         <li className="nav-link">
-                           <Link className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Skills</Link>
+                            <a href='#skills' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Skills</a>
                         </li>
-                        <li className="nav-link"><Link className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Education</Link></li>
-                        <li className="nav-link"><Link className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Experience</Link></li>
-                        <li className="nav-link"><Link className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Projects</Link></li>
-                        <li className="nav-link"><Link className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Contact</Link></li>
+                        <li className="nav-link"><a href='#education' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Education</a></li>
+                        <li className="nav-link"><a href='#experience' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Experience</a></li>
+                        <li className="nav-link"><a href='#projects' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Projects</a></li>
+                        <li className="nav-link"><a href='#contact' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Contact</a></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost btn-sm sm:btn-md text-xs sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev</a>
@@ -30,21 +51,33 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><a href="#about" className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">About</a></li>
-                        <li>
-                           <a href='#skills' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</a>
-                        </li>
-                        <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Education</Link></li>
-                        <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Experience</Link></li>
-                        <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Projects</Link></li>
-                        <li><Link className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Contact</Link></li>
+                    <li>
+                        <a href='#skills' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</a>
+                    </li>
+                    <li><a href='#education' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Education</a></li>
+                    <li><a href='#experience' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Experience</a></li>
+                    <li><a href='#projects' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Projects</a></li>
+                    <li><a href='#contact' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Contact</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                   <a
-                                      href={resumePdf}
-                                      download="Mohammad_Moniruzzaman_Europass_CV.pdf"
-                                      className="btn btn-sm sm:btn-md md:btn-lg btn-accent flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
-                                    >_Resume</a>
+            <div className="navbar-end justify-end gap-3 items-center">
+                <button
+                    type="button"
+                    onClick={() => setIsDark((prev) => !prev)}
+                    aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                    className={`theme-toggle ${isDark ? 'theme-toggle-dark' : 'theme-toggle-light'}`}
+                >
+                    <span className="theme-icon">
+                        {isDark ? <IoMdSunny /> : <IoMoon />}
+                    </span>
+                    <span className="theme-label">{isDark ? 'Light' : 'Dark'}</span>
+                </button>
+                <a
+                    href={resumePdf}
+                    download="Mohammad_Moniruzzaman_Europass_CV.pdf"
+                    className="btn btn-sm sm:btn-md md:btn-lg btn-accent flex items-center gap-1 whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:text-white active:scale-95 sm:gap-2"
+                >_Resume</a>
+
             </div>
         </div>
     );

@@ -141,7 +141,7 @@
   font-family: var(--font-raleway);
 }
 
-/* Global responsive utilities */
+Global responsive utilities
 :root {
   /* Mobile-first font sizes */
   font-size: 16px;
