@@ -7,7 +7,7 @@ const Footer = () => {
     const socialLinks = [
         { label: "GitHub", href: "https://github.com/monirzkhan", icon: <FaGithub size={18} /> , className: "social-link1" },
         { label: "LinkedIn", href: "https://linkedin.com/in/monirzkhan-dev", icon: <FaLinkedin size={18} />, className: "social-link2" },
-        { label: "Discord", href: "#", icon: <FaDiscord size={18} />, className: "social-link3" },
+        { label: "Discord", href: "https://discord.com/users/monirzkhan_12009", icon: <FaDiscord size={18} />, className: "social-link3" },
         { label: "Email", href: "mailto:mmonirz.dev@gmail.com", icon: <GoMail size={18} />, className: "social-link4" },
         { label: "Facebook", href: "https://www.facebook.com/odvut.kabbo", icon: <FaFacebook size={18} />, className: "social-link5" },
         { label: "WhatsApp", href: "https://wa.me/+8801782421132", icon: <FaWhatsapp size={18} />, className: "social-link6" },

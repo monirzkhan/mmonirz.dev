@@ -41,6 +41,6 @@ export const socialLinks = [
   },
   {
     icon: FaDiscord,
-    url: "https://x.com/yourprofile",
+    url: "https://discord.com/users/monirzkhan_12009",
   },
 ];
