@@ -24,7 +24,7 @@ const Footer = () => {
             </nav>
             <div className="flex items-center justify-center">
                  <img src="https://i.ibb.co.com/tMhJf2Xy/logo.png" alt="logo" className='md:h-10 h-5' />
-                <a className=" btn-sm sm:btn-md text-xs sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev
+                <a className=" btn-sm sm:btn-md  sm:text-lg md:text-xl font-bold hover:text-white transition-colors duration-300 hover:drop-shadow-lg">MmonirZ.Dev
                     
                 </a>
             </div>

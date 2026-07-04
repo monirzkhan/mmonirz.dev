@@ -17,6 +17,8 @@ import { BsJavascript } from "react-icons/bs";
 import { FaHtml5 } from "react-icons/fa6";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiDaisyui } from "react-icons/si";
+import { SiReactrouter } from "react-icons/si";
+
 
 
 
@@ -26,11 +28,14 @@ const iconMap = {
     CSS: <FaCss3Alt />,
     JavaScript: <BsJavascript></BsJavascript>,
     React: <FaReact className="text-sky-400" />,
+    ReactRouter: <SiReactrouter className="text-sky-400" />,
     "Express.js": <SiExpress className="text-gray-300" />,
     MongoDB: <SiMongodb className="text-green-500" />,
     Firebase: <SiFirebase className="text-yellow-400" />,
     "Tailwind CSS": <SiTailwindcss className="text-cyan-400" />,
     JWT: <SiJsonwebtokens className="text-orange-400" />,
+    Recharts: <SiJsonwebtokens className="text-orange-400" />,
+    "Sweet Alert": <SiJsonwebtokens className="text-orange-400" />,
     DaisyUI:<SiDaisyui/>
 };
 
@@ -46,7 +51,7 @@ const ProjectCard = ({ project }) => {
     } = project;
 
     return (
-        <div className="grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-xl transition-all duration-500 hover:border-indigo-500 hover:shadow-indigo-500/20">
+        <div className="grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-xl transition-all duration-500 hover:border-cyan-400 hover:-translate-y-2 hover:shadow-cyan-500/20">
 
             {/* Left Side */}
 
@@ -69,7 +74,7 @@ const ProjectCard = ({ project }) => {
                         {technologies.map((tech) => (
                             <span
                                 key={tech}
-                                className="flex items-center gap-2 rounded-full bg-slate-800 border border-slate-700 px-4 py-2 text-sm text-gray-200 hover:border-indigo-500 transition"
+                                className="flex items-center gap-2 rounded-full bg-slate-800 border border-slate-700 px-4 py-2 text-sm text-gray-200 hover:border-cyan-400 transition"
                             >
                                 {iconMap[tech]}
                                 {tech}
@@ -86,7 +91,7 @@ const ProjectCard = ({ project }) => {
 
                     <Link
                         to={`/project/${id}`}
-                        className="rounded-full bg-indigo-600 hover:bg-indigo-500 transition px-6 py-3 font-semibold text-white"
+                        className="bg-indigo-600 hover:bg-indigo-500 transition-all duration-300 hover:scale-105 px-8 py-4 rounded-full"
                     >
                         More Details →
                     </Link>

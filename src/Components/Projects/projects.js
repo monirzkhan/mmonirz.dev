@@ -19,12 +19,15 @@ const projects = [
             "CSS",
             "JavaScript",
             "React",
+            "ReactRouter",
             "Express.js",
             "MongoDB",
             "Firebase",
             "JWT",
             "Tailwind CSS",
-            "DaisyUI"
+            "DaisyUI",
+            "Sweet Alert",
+            "Recharts"
         ],
 
         live: "https://my-wedding-zone.vercel.app/",
@@ -62,9 +65,14 @@ const projects = [
             "CSS",
             "JavaScript",
             "React",
+            "ReactRouter",
             "Node.js",
             "Tailwind CSS",
-            "DaisyUI"
+            "DaisyUI",
+            "Recharts",
+            "React Toastify"
+
+
 
         ],
 
@@ -104,7 +112,8 @@ const projects = [
             "JavaScript",
             "Node.js",
             "Tailwind CSS",
-            "DaisyUI"
+            "DaisyUI",
+            "React Toastify"
         ],
 
         live: "https://incandescent-selkie-aef535.netlify.app/",

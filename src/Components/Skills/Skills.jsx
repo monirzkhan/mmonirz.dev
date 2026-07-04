@@ -4,7 +4,7 @@ import { skillCategories } from "./SkillsData";
 
 export default function Skills() {
     return (
-        <section className="skills section " id="skills">
+        <section className="skills section p-12 " id="skills">
 
             <div className="section-title md:-mb-120">
 

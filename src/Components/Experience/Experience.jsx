@@ -7,7 +7,7 @@ import ElectricBorder from "./ElectricBorder";
 export default function Experience() {
   return (
     <section
-      className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8"
+      className="relative overflow-hidden px-12 py-16 sm:px-6 lg:px-8"
       id="experience"
       style={{
         backgroundImage:

@@ -40,7 +40,7 @@ const Navbar = () => {
                         <li className="nav-link">
                             <a href='#skills' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Skills</a>
                         </li>
-                        <li className="nav-link"><a href='#education' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Education</a></li>
+                        {/* <li className="nav-link"><a href='#education' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Education</a></li> */}
                         <li className="nav-link"><a href='#experience' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Experience</a></li>
                         <li className="nav-link"><a href='#projects' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Projects</a></li>
                         <li className="nav-link"><a href='#contact' className="text-xs sm:text-sm hover:text-white hover:bg-purple-600 transition-all">Contact</a></li>
@@ -57,7 +57,7 @@ const Navbar = () => {
                     <li>
                         <a href='#skills' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Skills</a>
                     </li>
-                    <li><a href='#education' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Education</a></li>
+                    {/* <li><a href='#education' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Education</a></li> */}
                     <li><a href='#experience' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Experience</a></li>
                     <li><a href='#projects' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Projects</a></li>
                     <li><a href='#contact' className="nav-link text-xs md:text-sm lg:text-base hover:text-white hover:bg-purple-600 transition-all duration-300 rounded px-2 md:px-3">Contact</a></li>

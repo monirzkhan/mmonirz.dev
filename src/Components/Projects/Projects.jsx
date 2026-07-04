@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 bg-[#0b1120] text-white"
+      className="p-12 bg-[#0b1120] text-white"
     >
       <div className="max-w-7xl mx-auto px-5">
 
