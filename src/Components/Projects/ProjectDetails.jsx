@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router";
+import { useEffect, useState } from "react";
 import projects from "./projects";
+import LoaderStack from "../Loader/LoaderStack";
 
 import {
     FaArrowLeft,
@@ -25,7 +27,6 @@ import {
     SiTailwindcss,
 } from "react-icons/si";
 import useScrollTop from "../../Hooks/useScrollTop";
-import { useEffect } from "react";
 import { BsJavascript } from "react-icons/bs";
 
 const iconMap = {
@@ -48,15 +49,22 @@ const ProjectDetails = () => {
 
     useScrollTop()
     const { id } = useParams();
+    const [isLoading, setIsLoading] = useState(true);
 
     const project = projects.find((item) => item.id === id);
+
     useEffect(() => {
-        document.title = `${project.title} | Moniruzzaman Portfolio`;
+        setIsLoading(true);
+        document.title = project ? `${project.title} | Moniruzzaman Portfolio` : "Moniruzzaman Portfolio";
 
         return () => {
             document.title = "Moniruzzaman Portfolio";
         };
-    }, [project]);
+    }, [id, project?.title]);
+
+    if (isLoading) {
+        return <LoaderStack duration={2000} onComplete={() => setIsLoading(false)} />;
+    }
 
     if (!project) {
         return (

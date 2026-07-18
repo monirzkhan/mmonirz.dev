@@ -1,16 +1,130 @@
-# React + Vite
+# 🚀 mmonirz.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 💼 Personal Portfolio Website of Mohammad Moniruzzaman
 
-## React Compiler
+A modern, responsive, and high-performance developer portfolio showcasing my projects, skills, experience, and contact information.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 **Live Demo:** https://mmonirz-dev.vercel.app/
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Preview
+
+![Portfolio Homepage](./assets/home.png)
+
+---
+
+## ✨ Features
+
+- 🎨 Modern & Responsive UI
+- ⚡ Lightning-fast performance with Vite
+- 🌙 Dark-themed design
+- 📱 Mobile-friendly layout
+- 🧑 About Me section
+- 💼 Featured Projects
+- 🛠 Skills & Technologies
+- 📈 Experience Timeline
+- 📞 Contact Form
+- 🔗 Social Links
+- 🎭 Smooth Animations
+- 🚀 SEO Optimized
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React, TypeScript |
+| Styling | Tailwind CSS |
+| Build Tool | Vite |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Deployment | Vercel |
+
+---
+
+## 📂 Folder Structure
+
+```bash
+mmonirz.dev
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── layouts/
+│   ├── hooks/
+│   ├── utils/
+│   ├── routes/
+│   └── main.tsx
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Monirzkhan/mmonirz.dev.git
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📬 Contact
+
+**Mohammad Moniruzzaman**
+
+🌐 Website: https://mmonirz-dev.vercel.app/
+
+GitHub: https://github.com/monirzkhan
+
+LinkedIn:
+https://linkedin.com/in/monizkhan-dev
+
+Email:
+mmonirz.dev@gmail.com
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.

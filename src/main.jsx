@@ -9,7 +9,9 @@ import Home from './Components/Home/Home.jsx'
 import NotFound from './Components/NotFound/NotFound.jsx'
 import ProjectDetails from './Components/Projects/ProjectDetails.jsx'
 
+
 const router = createBrowserRouter([
+  
 
   {
     path: '/',
